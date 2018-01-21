@@ -1,0 +1,678 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/9n/w7dlr_jx1dq7wv3_lm3174ph0000gn/T/d-117428-52840-cd3811.byjqy0t3xr/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/9n/w7dlr_jx1dq7wv3_lm3174ph0000gn/T/d-117428-52840-cd3811.byjqy0t3xr/package.tgz",
+        "spec": "/private/var/folders/9n/w7dlr_jx1dq7wv3_lm3174ph0000gn/T/d-117428-52840-cd3811.byjqy0t3xr/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/9n/w7dlr_jx1dq7wv3_lm3174ph0000gn/T/apm-install-dir-117428-52840-1lsnlsv.02wvghw7b9"
+    ]
+  ],
+  "_from": "../d-117428-52840-cd3811.byjqy0t3xr/package.tgz",
+  "_id": "jekyll@2.1.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/jekyll",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/9n/w7dlr_jx1dq7wv3_lm3174ph0000gn/T/d-117428-52840-cd3811.byjqy0t3xr/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/9n/w7dlr_jx1dq7wv3_lm3174ph0000gn/T/d-117428-52840-cd3811.byjqy0t3xr/package.tgz",
+    "spec": "/private/var/folders/9n/w7dlr_jx1dq7wv3_lm3174ph0000gn/T/d-117428-52840-cd3811.byjqy0t3xr/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117428-52840-cd3811.byjqy0t3xr/package.tgz",
+  "_shasum": "5f95dae9dc1f77f5664cc6741cbb1b4d843642e2",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/9n/w7dlr_jx1dq7wv3_lm3174ph0000gn/T/d-117428-52840-cd3811.byjqy0t3xr/package.tgz",
+  "_where": "/private/var/folders/9n/w7dlr_jx1dq7wv3_lm3174ph0000gn/T/apm-install-dir-117428-52840-1lsnlsv.02wvghw7b9",
+  "activationCommands": {
+    "atom-workspace": [
+      "jekyll:open-layout",
+      "jekyll:new-post",
+      "jekyll:open-config",
+      "jekyll:open-include",
+      "jekyll:open-data",
+      "jekyll:toggle-server",
+      "jekyll:toggle-auto-build",
+      "jekyll:new-post",
+      "jekyll:build-site",
+      "jekyll:publish-draft"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/arcath/jekyll-atom/issues"
+  },
+  "dependencies": {
+    "etch": "^0.12.2",
+    "fs-plus": "^3.0.0",
+    "js-yaml": "^3.8.3",
+    "latinize": "^0.4.0",
+    "static-server": "^2.0.4",
+    "temp": "~0.8.3"
+  },
+  "description": "A collection of snippets and tools for Jekyll",
+  "devDependencies": {},
+  "engines": {
+    "atom": "*"
+  },
+  "homepage": "https://github.com/arcath/jekyll-atom#readme",
+  "keywords": [
+    "jekyll",
+    "snippets",
+    "server",
+    "build"
+  ],
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "jekyll",
+  "optionalDependencies": {},
+  "readme": "# Jekyll-Atom [![Build Status](https://travis-ci.org/Arcath/jekyll-atom.svg?branch=master)](https://travis-ci.org/Arcath/jekyll-atom) [![Dependency Status](https://david-dm.org/arcath/jekyll-atom.svg)](https://david-dm.org/arcath/jekyll-atom) [![Join the chat at https://gitter.im/Arcath/jekyll-atom](https://badges.gitter.im/Arcath/jekyll-atom.svg)](https://gitter.im/Arcath/jekyll-atom?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n\nA collection of snippets and tools for [Jekyll] in [Atom]\n\n[![Jekyll Logo](https://raw.githubusercontent.com/Arcath/jekyll-atom/master/images/jekyll.png)](http://jekyllrb.com)\n\n# Configuring\n\nJekyll-Atom has a few settings that can be set through the [Atom] settings.\n\n`Server Port` The port used by [static-server](https://github.com/nbluis/static-server), defaults to `3000`\n\n`Build Command` An array containing the default command to build a site, defaults to `jekyll, build`. Can be overridden in your projects `_config.yml`.\n\n - The `Build Command` will most likely need changing due to some weirdness with $PATH in [Atom].\n   - Go into the packages settings (Settings -> Packages -> Jekyll).\n   - Change `Build Command` to `/path/to/jekyll, build`.\n   - You can get your /path/to/jekyll by using `which jekyll` in your terminal.\n\n## _config.yml\n\nJekyll Atom can pickup project specific config from your `_config.yml`.\n\nFor Example:\n\n```yaml\natom:\n  buildCommand:\n    - jekyll\n    - build\n    - --option\n    - --this\n  buildEnv:\n    JEKYLL_ENV: development\n  postDirs:\n    - _newsletters\n  defaultPostDir: _drafts\n```\n\n### buildCommand\n\nbuildCommand works the same as it does in the Atom settings and is an override for this site.\n\n### buildEnv\n\nThe environment used for the build process lets you set any environment variables you desire.\n\n### postDirs\n\nThe directories that appear on the new post modal. `_posts` and `_drafts` are added by default.\n\n### defaultPostDir\n\nThe default directory to be selected on the new post modal. Defaults to `_posts`.\n\n# Usage\n\n## Server Management\n\nJekyll-Atom can host a server to preview your site!\n\nThe server runs in the background and can be started/stopped from anywhere using the Toggle Server command `Alt-Shift-T`.\n\nWhilst running any time you save in Atom your site will be built and available on the port you set in config.\n\n## Auto Building\n\nIf you would prefer jekyll-atom to simply build your site on save instead of serving it on static server you can use the command `Jekyll: Toggle Auto Build` to turn building of your site on save on/off.\n\n## Grammars\n\nJekyll-Atom adds 3 language grammars to Atom `Jekyll (HTML)`, `Jekyll (XML)` and `Jekyll (JSON)`. All 3 add Liquid and YAML highlighting to their respective format.\n\n> Liquid Highlighting requires the [language-liquid](https://atom.io/packages/language-liquid) package to be installed.\n\n## Functions\n\n### Open the layout for the current file\n\nWhen triggered this function looks through your file for `layout: foo` and then opens `LAYOUTS_DIR/foo.LAYOUT_FORMAT`\n\n### Open the include for the cursor position\n\nWhen triggered this function opens up the include for the current tag. For example if you had `{% include snippet.html %}` Atom would open `INCLUDES_DIR/snippet.html`\n\n### Create a new Post\n\nWhen triggered this function brings up a popup at the top of the screen for you to type in the title of your new post e.g. `Something Really Cool!` (on the date 2/4/2014). When you submit the form a new file of `POSTSDIR/2014-04-02-something-really-cool.POST_FORMAT` will be created with a very basic front matter and opened on the screen.\n\n### Open Config\n\nOpens `_config.yml`\n\n### Open Data File\n\nWhen Triggered this function looks at the text around your cursor to find the data file to open. For Example triggering Open Data File whilst your cursor is within the `site.data.team` in this `{{ blah site.data.team }}` would result in `DATADIR/team.yml` being opened.\n\n## Keyboard Shortcuts\n\n`Cmd-Alt-L` Open the layout for the current file\n\n`Cmd-Alt-D` Open the Datafile\n\n`Cmd-Shift-I` Open include\n\n`Cmd-Alt-J` Create a new post\n\n`Alt-Shift-T` Turn the server on/off\n\n## Snippets\n\nThere are a load of snippets provided by this plugin, please check the settings pane in atom for a full list.\n\n# Contributing\n\nFeel free to fork this repo and submit changes!\n\nWhen you fork Jekyll-Atom please:\n\n1. Create your feature branch (`git checkout -b my-new-feature`)\n2. Commit your changes (`git commit -am 'Add some feature'`)\n3. Push to the branch (`git push origin my-new-feature`)\n4. Create new Pull Request\n\n[Jekyll]: http://jekyllrb.com\n[Atom]: https://atom.io\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcath/jekyll-atom.git"
+  },
+  "version": "2.1.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "ansi-regex",
+        "version": "0.2.1",
+        "path": "node_modules/ansi-regex/index.js"
+      },
+      {
+        "name": "ansi-styles",
+        "version": "1.1.0",
+        "path": "node_modules/ansi-styles/index.js"
+      },
+      {
+        "name": "argparse",
+        "version": "1.0.9",
+        "path": "node_modules/argparse/index.js"
+      },
+      {
+        "name": "async",
+        "version": "1.5.2",
+        "path": "node_modules/async/lib/async.js"
+      },
+      {
+        "name": "balanced-match",
+        "version": "0.4.2",
+        "path": "node_modules/balanced-match/index.js"
+      },
+      {
+        "name": "brace-expansion",
+        "version": "1.1.7",
+        "path": "node_modules/brace-expansion/index.js"
+      },
+      {
+        "name": "chalk",
+        "version": "0.5.1",
+        "path": "node_modules/chalk/index.js"
+      },
+      {
+        "name": "commander",
+        "version": "2.9.0",
+        "path": "node_modules/commander/index.js"
+      },
+      {
+        "name": "concat-map",
+        "version": "0.0.1",
+        "path": "node_modules/concat-map/index.js"
+      },
+      {
+        "name": "escape-string-regexp",
+        "version": "1.0.5",
+        "path": "node_modules/escape-string-regexp/index.js"
+      },
+      {
+        "name": "esprima",
+        "version": "3.1.3",
+        "path": "node_modules/esprima/dist/esprima.js"
+      },
+      {
+        "name": "etch",
+        "version": "0.12.4",
+        "path": "node_modules/etch/lib/index.js"
+      },
+      {
+        "name": "file-size",
+        "version": "0.0.5",
+        "path": "node_modules/file-size/index.js"
+      },
+      {
+        "name": "fs-plus",
+        "version": "3.0.0",
+        "path": "node_modules/fs-plus/lib/fs-plus.js"
+      },
+      {
+        "name": "fs.realpath",
+        "version": "1.0.0",
+        "path": "node_modules/fs.realpath/index.js"
+      },
+      {
+        "name": "glob",
+        "version": "7.1.2",
+        "path": "node_modules/glob/glob.js"
+      },
+      {
+        "name": "graceful-readlink",
+        "version": "1.0.1",
+        "path": "node_modules/graceful-readlink/index.js"
+      },
+      {
+        "name": "has-ansi",
+        "version": "0.1.0",
+        "path": "node_modules/has-ansi/index.js"
+      },
+      {
+        "name": "inflight",
+        "version": "1.0.6",
+        "path": "node_modules/inflight/inflight.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.3",
+        "path": "node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "js-yaml",
+        "version": "3.8.4",
+        "path": "node_modules/js-yaml/index.js"
+      },
+      {
+        "name": "latinize",
+        "version": "0.4.0",
+        "path": "node_modules/latinize/latinize.js"
+      },
+      {
+        "name": "mime",
+        "version": "1.3.6",
+        "path": "node_modules/mime/mime.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "3.0.4",
+        "path": "node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "minimist",
+        "version": "0.0.8",
+        "path": "node_modules/minimist/index.js"
+      },
+      {
+        "name": "mkdirp",
+        "version": "0.5.1",
+        "path": "node_modules/mkdirp/index.js"
+      },
+      {
+        "name": "once",
+        "version": "1.4.0",
+        "path": "node_modules/once/once.js"
+      },
+      {
+        "name": "os-tmpdir",
+        "version": "1.0.2",
+        "path": "node_modules/os-tmpdir/index.js"
+      },
+      {
+        "name": "path-is-absolute",
+        "version": "1.0.1",
+        "path": "node_modules/path-is-absolute/index.js"
+      },
+      {
+        "name": "rimraf",
+        "version": "2.6.1",
+        "path": "node_modules/rimraf/rimraf.js"
+      },
+      {
+        "name": "sprintf-js",
+        "version": "1.0.3",
+        "path": "node_modules/sprintf-js/src/sprintf.js"
+      },
+      {
+        "name": "static-server",
+        "version": "2.0.4",
+        "path": "node_modules/static-server/server.js"
+      },
+      {
+        "name": "strip-ansi",
+        "version": "0.3.0",
+        "path": "node_modules/strip-ansi/index.js"
+      },
+      {
+        "name": "supports-color",
+        "version": "0.2.0",
+        "path": "node_modules/supports-color/index.js"
+      },
+      {
+        "name": "temp",
+        "version": "0.8.3",
+        "path": "node_modules/temp/lib/temp.js"
+      },
+      {
+        "name": "rimraf",
+        "version": "2.2.8",
+        "path": "node_modules/temp/node_modules/rimraf/rimraf.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.6.0",
+        "path": "node_modules/underscore/underscore.js"
+      },
+      {
+        "name": "underscore-plus",
+        "version": "1.6.6",
+        "path": "node_modules/underscore-plus/lib/underscore-plus.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.2",
+        "path": "node_modules/wrappy/wrappy.js"
+      }
+    ],
+    "extensions": {
+      ".coffee": [
+        "lib/jekyll/jekyll.coffee",
+        "lib/jekyll/new-post-view.coffee",
+        "lib/jekyll/utils.coffee",
+        "lib/main.coffee",
+        "lib/server/auto-build.coffee",
+        "lib/server/build.coffee",
+        "lib/server/server.coffee"
+      ],
+      ".js": [
+        "node_modules/ansi-regex/index.js",
+        "node_modules/ansi-styles/index.js",
+        "node_modules/argparse/index.js",
+        "node_modules/argparse/lib/action/append/constant.js",
+        "node_modules/argparse/lib/action/append.js",
+        "node_modules/argparse/lib/action/count.js",
+        "node_modules/argparse/lib/action/help.js",
+        "node_modules/argparse/lib/action/store/constant.js",
+        "node_modules/argparse/lib/action/store/false.js",
+        "node_modules/argparse/lib/action/store/true.js",
+        "node_modules/argparse/lib/action/store.js",
+        "node_modules/argparse/lib/action/subparsers.js",
+        "node_modules/argparse/lib/action/version.js",
+        "node_modules/argparse/lib/action.js",
+        "node_modules/argparse/lib/action_container.js",
+        "node_modules/argparse/lib/argparse.js",
+        "node_modules/argparse/lib/argument/error.js",
+        "node_modules/argparse/lib/argument/exclusive.js",
+        "node_modules/argparse/lib/argument/group.js",
+        "node_modules/argparse/lib/argument_parser.js",
+        "node_modules/argparse/lib/const.js",
+        "node_modules/argparse/lib/help/added_formatters.js",
+        "node_modules/argparse/lib/help/formatter.js",
+        "node_modules/argparse/lib/namespace.js",
+        "node_modules/argparse/lib/utils.js",
+        "node_modules/async/dist/async.js",
+        "node_modules/async/dist/async.min.js",
+        "node_modules/async/lib/async.js",
+        "node_modules/balanced-match/index.js",
+        "node_modules/brace-expansion/index.js",
+        "node_modules/chalk/index.js",
+        "node_modules/commander/index.js",
+        "node_modules/concat-map/example/map.js",
+        "node_modules/concat-map/index.js",
+        "node_modules/escape-string-regexp/index.js",
+        "node_modules/esprima/bin/esparse.js",
+        "node_modules/esprima/bin/esvalidate.js",
+        "node_modules/esprima/dist/esprima.js",
+        "node_modules/etch/lib/component-helpers.js",
+        "node_modules/etch/lib/default-scheduler.js",
+        "node_modules/etch/lib/dom.js",
+        "node_modules/etch/lib/event-listener-props.js",
+        "node_modules/etch/lib/index.js",
+        "node_modules/etch/lib/patch.js",
+        "node_modules/etch/lib/render.js",
+        "node_modules/etch/lib/scheduler-assignment.js",
+        "node_modules/etch/lib/svg-attribute-translations.js",
+        "node_modules/etch/lib/svg-tags.js",
+        "node_modules/etch/lib/update-props.js",
+        "node_modules/file-size/index.js",
+        "node_modules/fs-plus/lib/fs-plus.js",
+        "node_modules/fs.realpath/index.js",
+        "node_modules/fs.realpath/old.js",
+        "node_modules/glob/common.js",
+        "node_modules/glob/glob.js",
+        "node_modules/glob/sync.js",
+        "node_modules/graceful-readlink/index.js",
+        "node_modules/has-ansi/cli.js",
+        "node_modules/has-ansi/index.js",
+        "node_modules/inflight/inflight.js",
+        "node_modules/inherits/inherits.js",
+        "node_modules/inherits/inherits_browser.js",
+        "node_modules/js-yaml/bin/js-yaml.js",
+        "node_modules/js-yaml/dist/js-yaml.js",
+        "node_modules/js-yaml/dist/js-yaml.min.js",
+        "node_modules/js-yaml/index.js",
+        "node_modules/js-yaml/lib/js-yaml/common.js",
+        "node_modules/js-yaml/lib/js-yaml/dumper.js",
+        "node_modules/js-yaml/lib/js-yaml/exception.js",
+        "node_modules/js-yaml/lib/js-yaml/loader.js",
+        "node_modules/js-yaml/lib/js-yaml/mark.js",
+        "node_modules/js-yaml/lib/js-yaml/schema/core.js",
+        "node_modules/js-yaml/lib/js-yaml/schema/default_full.js",
+        "node_modules/js-yaml/lib/js-yaml/schema/default_safe.js",
+        "node_modules/js-yaml/lib/js-yaml/schema/failsafe.js",
+        "node_modules/js-yaml/lib/js-yaml/schema/json.js",
+        "node_modules/js-yaml/lib/js-yaml/schema.js",
+        "node_modules/js-yaml/lib/js-yaml/type/binary.js",
+        "node_modules/js-yaml/lib/js-yaml/type/bool.js",
+        "node_modules/js-yaml/lib/js-yaml/type/float.js",
+        "node_modules/js-yaml/lib/js-yaml/type/int.js",
+        "node_modules/js-yaml/lib/js-yaml/type/js/function.js",
+        "node_modules/js-yaml/lib/js-yaml/type/js/regexp.js",
+        "node_modules/js-yaml/lib/js-yaml/type/js/undefined.js",
+        "node_modules/js-yaml/lib/js-yaml/type/map.js",
+        "node_modules/js-yaml/lib/js-yaml/type/merge.js",
+        "node_modules/js-yaml/lib/js-yaml/type/null.js",
+        "node_modules/js-yaml/lib/js-yaml/type/omap.js",
+        "node_modules/js-yaml/lib/js-yaml/type/pairs.js",
+        "node_modules/js-yaml/lib/js-yaml/type/seq.js",
+        "node_modules/js-yaml/lib/js-yaml/type/set.js",
+        "node_modules/js-yaml/lib/js-yaml/type/str.js",
+        "node_modules/js-yaml/lib/js-yaml/type/timestamp.js",
+        "node_modules/js-yaml/lib/js-yaml/type.js",
+        "node_modules/js-yaml/lib/js-yaml.js",
+        "node_modules/latinize/examples/node.js",
+        "node_modules/latinize/latinize.js",
+        "node_modules/mime/build/build.js",
+        "node_modules/mime/build/test.js",
+        "node_modules/mime/cli.js",
+        "node_modules/mime/mime.js",
+        "node_modules/minimatch/minimatch.js",
+        "node_modules/minimist/example/parse.js",
+        "node_modules/minimist/index.js",
+        "node_modules/mkdirp/bin/cmd.js",
+        "node_modules/mkdirp/examples/pow.js",
+        "node_modules/mkdirp/index.js",
+        "node_modules/once/once.js",
+        "node_modules/os-tmpdir/index.js",
+        "node_modules/path-is-absolute/index.js",
+        "node_modules/rimraf/bin.js",
+        "node_modules/rimraf/rimraf.js",
+        "node_modules/sprintf-js/dist/angular-sprintf.min.js",
+        "node_modules/sprintf-js/dist/sprintf.min.js",
+        "node_modules/sprintf-js/gruntfile.js",
+        "node_modules/sprintf-js/src/angular-sprintf.js",
+        "node_modules/sprintf-js/src/sprintf.js",
+        "node_modules/static-server/bin/static-server.js",
+        "node_modules/static-server/server.js",
+        "node_modules/strip-ansi/cli.js",
+        "node_modules/strip-ansi/index.js",
+        "node_modules/supports-color/cli.js",
+        "node_modules/supports-color/index.js",
+        "node_modules/temp/examples/grepcount.js",
+        "node_modules/temp/examples/pdfcreator.js",
+        "node_modules/temp/lib/temp.js",
+        "node_modules/temp/no_cleanup.js",
+        "node_modules/temp/no_cleanup_on_exit.js",
+        "node_modules/temp/no_cleanup_on_exit.spec.js",
+        "node_modules/temp/node_modules/rimraf/bin.js",
+        "node_modules/temp/node_modules/rimraf/rimraf.js",
+        "node_modules/underscore/underscore-min.js",
+        "node_modules/underscore/underscore.js",
+        "node_modules/underscore-plus/lib/underscore-plus.js",
+        "node_modules/wrappy/wrappy.js"
+      ],
+      ".json": [
+        "node_modules/ansi-regex/package.json",
+        "node_modules/ansi-styles/package.json",
+        "node_modules/argparse/package.json",
+        "node_modules/async/package.json",
+        "node_modules/balanced-match/package.json",
+        "node_modules/brace-expansion/package.json",
+        "node_modules/chalk/package.json",
+        "node_modules/commander/package.json",
+        "node_modules/concat-map/package.json",
+        "node_modules/escape-string-regexp/package.json",
+        "node_modules/esprima/package.json",
+        "node_modules/etch/package.json",
+        "node_modules/file-size/package.json",
+        "node_modules/fs-plus/package.json",
+        "node_modules/fs.realpath/package.json",
+        "node_modules/glob/package.json",
+        "node_modules/graceful-readlink/package.json",
+        "node_modules/has-ansi/package.json",
+        "node_modules/inflight/package.json",
+        "node_modules/inherits/package.json",
+        "node_modules/js-yaml/package.json",
+        "node_modules/latinize/bower.json",
+        "node_modules/latinize/package.json",
+        "node_modules/mime/package.json",
+        "node_modules/mime/types.json",
+        "node_modules/minimatch/package.json",
+        "node_modules/minimist/package.json",
+        "node_modules/mkdirp/package.json",
+        "node_modules/once/package.json",
+        "node_modules/os-tmpdir/package.json",
+        "node_modules/path-is-absolute/package.json",
+        "node_modules/rimraf/package.json",
+        "node_modules/sprintf-js/bower.json",
+        "node_modules/sprintf-js/package.json",
+        "node_modules/static-server/package.json",
+        "node_modules/strip-ansi/package.json",
+        "node_modules/supports-color/package.json",
+        "node_modules/temp/node_modules/rimraf/package.json",
+        "node_modules/temp/package.json",
+        "node_modules/underscore/package.json",
+        "node_modules/underscore-plus/package.json",
+        "node_modules/wrappy/package.json",
+        "package.json"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "lib/jekyll",
+          "lib",
+          "lib/server",
+          "",
+          "spec"
+        ],
+        "dependencies": {
+          "etch": "^0.12.2",
+          "fs-plus": "^3.0.0",
+          "js-yaml": "^3.8.3",
+          "latinize": "^0.4.0",
+          "static-server": "^2.0.4",
+          "temp": "~0.8.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/argparse",
+          "node_modules/argparse/lib/action/append",
+          "node_modules/argparse/lib/action",
+          "node_modules/argparse/lib/action/store",
+          "node_modules/argparse/lib",
+          "node_modules/argparse/lib/argument",
+          "node_modules/argparse/lib/help"
+        ],
+        "dependencies": {
+          "sprintf-js": "~1.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/brace-expansion"
+        ],
+        "dependencies": {
+          "balanced-match": "^0.4.1",
+          "concat-map": "0.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/chalk"
+        ],
+        "dependencies": {
+          "ansi-styles": "^1.1.0",
+          "escape-string-regexp": "^1.0.0",
+          "has-ansi": "^0.1.0",
+          "strip-ansi": "^0.3.0",
+          "supports-color": "^0.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/commander"
+        ],
+        "dependencies": {
+          "graceful-readlink": ">= 1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/fs-plus/lib",
+          "node_modules/fs-plus"
+        ],
+        "dependencies": {
+          "async": "^1.5.2",
+          "mkdirp": "^0.5.1",
+          "rimraf": "^2.5.2",
+          "underscore-plus": "1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/glob"
+        ],
+        "dependencies": {
+          "fs.realpath": "^1.0.0",
+          "inflight": "^1.0.4",
+          "inherits": "2",
+          "minimatch": "^3.0.4",
+          "once": "^1.3.0",
+          "path-is-absolute": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/has-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^0.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/inflight"
+        ],
+        "dependencies": {
+          "once": "^1.3.0",
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/js-yaml/bin",
+          "node_modules/js-yaml/dist",
+          "node_modules/js-yaml",
+          "node_modules/js-yaml/lib/js-yaml",
+          "node_modules/js-yaml/lib/js-yaml/schema",
+          "node_modules/js-yaml/lib/js-yaml/type",
+          "node_modules/js-yaml/lib/js-yaml/type/js",
+          "node_modules/js-yaml/lib"
+        ],
+        "dependencies": {
+          "argparse": "^1.0.7",
+          "esprima": "^3.1.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/minimatch"
+        ],
+        "dependencies": {
+          "brace-expansion": "^1.1.7"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mkdirp/bin",
+          "node_modules/mkdirp/examples",
+          "node_modules/mkdirp",
+          "node_modules/mkdirp/test"
+        ],
+        "dependencies": {
+          "minimist": "0.0.8"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/once"
+        ],
+        "dependencies": {
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/rimraf"
+        ],
+        "dependencies": {
+          "glob": "^7.0.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/static-server/bin",
+          "node_modules/static-server",
+          "node_modules/static-server/test/fixtures",
+          "node_modules/static-server/test"
+        ],
+        "dependencies": {
+          "chalk": "^0.5.1",
+          "commander": "^2.3.0",
+          "file-size": "0.0.5",
+          "mime": "^1.2.11"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/strip-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^0.2.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/temp/examples",
+          "node_modules/temp/lib",
+          "node_modules/temp",
+          "node_modules/temp/test"
+        ],
+        "dependencies": {
+          "os-tmpdir": "^1.0.0",
+          "rimraf": "~2.2.6"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/underscore-plus/lib",
+          "node_modules/underscore-plus"
+        ],
+        "dependencies": {
+          "underscore": "~1.6.0"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+[global]
+root = /Developer/NVIDIA/CUDA-7.5
+device = gpu
+floatX = float32

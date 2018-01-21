@@ -1,0 +1,71 @@
+# Iron components snippets
+
+".text.html":
+  "iron-ajax":
+    "prefix": "iron-ajax"
+    "body": """
+    <iron-ajax id="$1"
+      ${2:auto}
+      url="$3"
+      handle-as="json"
+      on-response="handleResponse"></iron-ajax>
+    """
+  "iron-collapse":
+    "prefix": "iron-collapse"
+    "body": """
+    <iron-collapse id="$1">
+      $2
+    </iron-collapse>
+    """
+  "iron-form":
+    "prefix": "iron-form"
+    "body": """
+    <form is="iron-form" id="${1:form}" method="${2:post}" action="${3:/form/handler}">
+      $4
+    </form>
+    """
+  "iron-icon":
+    "prefix": "iron-icon"
+    "body": """
+    <iron-icon icon="$1"></iron-icon>
+    """
+  "iron-iconset":
+    "prefix": "iron-iconset"
+    "body": """
+    <iron-iconset id="${1:my-icons}" src="${2:my-icons.png}" width="${3:96}" iconSize="${4:24}"
+        icons="${5:location place}">
+    </iron-iconset>
+    """
+  "iron-image":
+    "prefix": "iron-image"
+    "body": """
+    <iron-image src="${1:http://lorempixel.com/400/400}"></iron-image>$2
+    """
+  "iron-input":
+    "prefix": "iron-input"
+    "body": """
+    <input is="iron-input" bind-value={{${1:myValue}}}"">
+    """
+  "iron-localstorage":
+    "prefix": "iron-localstorage"
+    "body": """
+    <iron-localstorage
+      name="${0:my-app-storage}"
+      value="{{${1:cartoon}}}"></iron-localstorage>
+    """
+  "iron-media-query":
+    "prefix": "iron-media-query"
+    "body": """
+    <iron-media-query
+      query="${1:(min-width: 600px)}"
+      query-matches="{{${2:queryMatches}}}"></iron-media-query>
+    """
+  "iron-pages":
+    "prefix": "iron-pages"
+    "body": """
+    <iron-pages selected="${1:0}">
+      <div>${2:One}</div>
+      <div>${3:Two}</div>
+      <div>${4:Three}</div>
+    </iron-pages>
+    """

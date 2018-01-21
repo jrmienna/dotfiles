@@ -1,0 +1,134 @@
+"*":
+  Termrk: {}
+  "activate-power-mode":
+    screenShake:
+      enabled: false
+  "atom-alignment": {}
+  "atom-beautify":
+    general:
+      _analyticsUserId: "fbe395c6-ab2c-4356-be02-ac022119be45"
+    html:
+      indent_size: 2
+    js:
+      brace_style: "collapse-preserve-inline"
+      indent_size: 1
+      indent_with_tabs: true
+      jslint_happy: true
+    scss:
+      indent_size: 2
+  "atom-terminal":
+    app: "iTerm.app"
+    setWorkingDirectory: false
+    surpressDirectoryArgument: false
+  "atom-typescript": {}
+  "autoclose-html": {}
+  "autocomplete-plus":
+    useCoreMovementCommands: false
+  "browser-plus": {}
+  build: {}
+  "color-picker":
+    automaticReplace: true
+    uppercaseColorValues: true
+  core:
+    disabledPackages: [
+      "autocomplete-css"
+      "Stylus"
+      "atom-jade"
+      "atom-polymer"
+      "autoclose-html"
+      "color-picker"
+      "docblockr"
+      "eval-javascript"
+      "git-log"
+      "jade-beautify"
+      "language-jade"
+      "merge-conflicts"
+      "meteor-api"
+      "pigments"
+      "react-es6-snippets"
+      "react-snippets"
+      "todo-show"
+      "terminal-plus"
+      "react"
+      "minimap"
+      "atom-live-server"
+      "sass-autocompile"
+      "goto-definition"
+      "emmet"
+      "vim-surround"
+      "jekyll"
+    ]
+    packagesWithKeymapsDisabled: [
+      "easy-motion-redux"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "isotope-ui"
+      "one-dark-syntax"
+    ]
+  "easy-motion": {}
+  editor:
+    fontSize: 13
+    invisibles: {}
+    scrollPastEnd: true
+  emmet: {}
+  "exception-reporting":
+    userId: "a544d2fa-30e3-4d95-2179-8d5648295e80"
+  "git-log": {}
+  "git-plus": {}
+  "isotope-ui":
+    customBackgroundColorPicker: "#0258ff"
+    fontWeight: "Extra light / Thin"
+  linter:
+    defaultErrorTab: "Line"
+    showErrorPanel: false
+  "linter-eslint": {}
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+  "markdown-preview": {}
+  "merge-conflicts": {}
+  "meteor-helper": {}
+  minimap:
+    absoluteMode: true
+    plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "identifier-highlight": true
+  "one-dark-ui":
+    layoutMode: "Compact"
+  preview:
+    _analyticsUserId: "58517f20-c2ea-48ce-b497-c0c201e34467"
+  "sass-autocompile":
+    compileFiles: "Only with first-line-comment"
+    compilePartials: true
+    directlyJumpToError: true
+    nodeSassPath: "/Users/mienna/node_modules/node-sass/bin/"
+  tabs:
+    usePreviewTabs: true
+  term2: {}
+  "terminal-plus":
+    core: {}
+    style: {}
+    toggles:
+      autoClose: true
+  "todo-show": {}
+  "tree-view": {}
+  "vim-mode": {}
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
+".basic.html.text":
+  editor:
+    showIndentGuide: true
+    showInvisibles: true
+".coffee.jsx.source":
+  editor:
+    autoIndent: false
+".js.jsx.source":
+  editor:
+    autoIndent: true
+".js.source":
+  editor:
+    showIndentGuide: true
+    showInvisibles: true

@@ -1,0 +1,120 @@
+# Paper components snippets
+
+".text.html":
+  "paper button":
+    "prefix": "paper-button"
+    "body": """
+    <paper-button ${1:raised}>${2:button}</paper-button>
+    """
+  "paper checkbox":
+    "prefix": "paper-checkbox"
+    "body": """
+    <paper-checkbox ${1:checked}>${2:label}</paper-checkbox>
+    """
+  "paper dialog":
+    "prefix": "paper-dialog"
+    "body": """
+    <paper-dialog>
+      <h2>${1:Header}</h2>
+      <paper-dialog-scrollable>
+        ${2:Lorem ipsum}
+      </paper-dialog-scrollable>
+      <div class="buttons">
+        <paper-button dialog-dismiss>${3:Cancel}</paper-button>
+        <paper-button dialog-confirm>${4:Accept}</paper-button>
+      </div>
+    </paper-dialog>
+    """
+  "paper drawer panel":
+    "prefix": "paper-drawer-panel"
+    "body": """
+    <paper-drawer-panel>
+      <div drawer>${1:Drawer}</div>
+      <div main>${2:Main Panel}</div>
+    </paper-drawer-panel>
+    """
+  "paper floating action button":
+    "prefix": "paper-fab"
+    "body": """
+    <paper-fab ${1:mini} icon="${2:favorite}"></paper-fab>
+    """
+  "paper header panel":
+    "prefix": "paper-header-panel"
+    "body": """
+    <paper-header-panel>
+      <paper-toolbar>${1:Header}</paper-toolbar>
+      <div>${2:Content goes here...}</div>
+    </paper-header-panel>
+    """
+  "paper icon button":
+    "prefix": "paper-icon-button"
+    "body": """
+    <paper-icon-button icon="${1:menu}"></paper-icon-button>
+    """
+  "paper material":
+    "prefix": "paper-material"
+    "body": """
+    <paper-material elevation="${1:1}">
+      $2
+    </paper-material>
+    """
+  "paper menu":
+    "prefix": "paper-menu"
+    "body": """
+    <paper-menu${1: multi}>
+      <paper-item>${2:Item 1}</paper-item>
+      <paper-item>${3:Item 2}</paper-item>
+    </paper-menu>
+    """
+  "paper progress":
+    "prefix": "paper-progress"
+    "body": """<paper-progress value="${1:10}"></paper-progress>"""
+  "paper radio button":
+    "prefix": "paper-radio-button"
+    "body": "<paper-radio-button${1: checked}></paper-radio-button>"
+  "paper radio group":
+    "prefix": "paper-radio-group"
+    "body": """
+    <paper-radio-group selected="${1:small}">
+      <paper-radio-button name="${2:small}">${3:Small}</paper-radio-button>
+      <paper-radio-button name="${4:medium}">${5:Medium}</paper-radio-button>
+      <paper-radio-button name="${6:large}">${7:Large}</paper-radio-button>
+    </paper-radio-group>
+    """
+  "paper ripple":
+    "prefix": "paper-ripple"
+    "body": """
+    <paper-ripple></paper-ripple>
+    """
+  "paper scroll header panel":
+    "prefix": "paper-scroll-header-panel"
+    "body": """
+    <paper-scroll-header-panel>
+      <paper-toolbar>${1:Header}</paper-toolbar>
+      <div>${2:Content goes here...}</div>
+    </paper-scroll-header-panel>
+    """
+  "paper slider":
+    "prefix": "paper-slider"
+    "body": """<paper-slider min="${0:10}" max="${1:200}" value="${2:110}"></paper-slider>"""
+  "paper spinner":
+    "prefix": "paper-spinner"
+    "body": "<paper-spinner${1: active}></paper-spinner>"
+  "paper tabs":
+    "prefix": "paper-tabs"
+    "body": """
+    <paper-tabs selected="0">
+      <paper-tab>${1:Tab 1}</paper-tab>
+      <paper-tab>${2:Tab 2}</paper-tab>
+      <paper-tab>${3:Tab 3}</paper-tab>
+    </paper-tabs>
+    """
+  "paper toolbar":
+    "prefix": "paper-toolbar"
+    "body": """
+    <paper-toolbar>
+      <paper-icon-button icon="$1" on-tap="menuAction"></paper-icon-button>
+      <div class="title">$2</div>
+      <paper-icon-button icon="$3" on-tap="moreAction"></paper-icon-button>
+    </paper-toolbar>
+    """

@@ -1,0 +1,85 @@
+tap "homebrew/boneyard"
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "homebrew/dupes"
+tap "homebrew/services"
+tap "homebrew/versions"
+brew "autoconf"
+brew "automake"
+brew "binutils"
+brew "cmake"
+brew "cmatrix"
+brew "coreutils"
+brew "cowsay"
+brew "cscope"
+brew "ctags"
+brew "elasticsearch@2.4"
+brew "libpng", args: ["universal"]
+brew "freetype", args: ["universal"]
+brew "fontconfig", args: ["universal"]
+brew "fortune"
+brew "gmp"
+brew "isl"
+brew "mpfr"
+brew "libmpc"
+brew "gcc"
+brew "jpeg", args: ["universal"]
+brew "libtiff", args: ["universal"]
+brew "webp"
+brew "gd", args: ["universal"]
+brew "gdb"
+brew "gdbm"
+brew "gettext"
+brew "libffi"
+brew "glib"
+brew "libtasn1", args: ["universal"]
+brew "nettle"
+brew "gnutls"
+brew "go"
+brew "libtool"
+brew "graphicsmagick"
+brew "ipcalc"
+brew "openssl"
+brew "irssi"
+brew "jasper", args: ["universal"]
+brew "jpeg-turbo"
+brew "jython"
+brew "libusb", args: ["universal"]
+brew "libusb-compat", args: ["universal"]
+brew "libgphoto2", args: ["universal"]
+brew "libicns", args: ["universal"]
+brew "libiconv"
+brew "libksba"
+brew "libxml2"
+brew "libxslt"
+brew "libyaml"
+brew "little-cms2", args: ["universal"]
+brew "makedepend"
+brew "makensis"
+brew "maven"
+brew "readline"
+brew "sqlite"
+brew "python"
+brew "mercurial"
+brew "mongodb", restart_service: true
+brew "mysql"
+brew "mysql-connector-c"
+brew "nmap"
+brew "node", args: ["without-npm"]
+brew "openssl@1.1"
+brew "ossp-uuid"
+brew "pkg-config"
+brew "xz"
+brew "python3"
+brew "postgresql"
+brew "ruby-build"
+brew "rbenv"
+brew "ruby"
+brew "sane-backends", args: ["universal"]
+brew "scons"
+brew "tika"
+brew "vim"
+brew "wget"
+brew "wine"
+brew "yarn"
+brew "zlib"

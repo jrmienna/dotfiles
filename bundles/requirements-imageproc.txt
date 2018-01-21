@@ -1,0 +1,14 @@
+dulwich==0.11.2
+funcsigs==0.4
+hg-git==0.8.2
+matplotlib==1.4.3
+mercurial==3.5.2
+mock==1.3.0
+nose==1.3.7
+numpy==1.9.3
+pbr==1.8.0
+Pillow==3.0.0
+pyparsing==2.0.3
+python-dateutil==2.4.2
+pytz==2015.6
+six==1.9.0

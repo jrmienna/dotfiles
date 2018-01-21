@@ -1,0 +1,74 @@
+".text.html":
+  "polymer element":
+    "prefix": "pe"
+    "body": """
+    <link rel="import" href="${1:../bower_components}/polymer/polymer.html">
+
+    <dom-module id="$2">
+      <template>
+        <style>
+          :host {
+            display: block;
+          }
+        </style>
+        $4
+      </template>
+      <script>
+        Polymer({
+          is: '$2',
+          $3
+        });
+      </script>
+    </dom-module>
+    """
+  "polymer element no template":
+    "prefix": "pen"
+    "body": """
+    <link rel="import" href="${1:../bower_components}/polymer/polymer.html">
+
+    <script>
+      Polymer({
+        is: '$2',
+        $3
+      });
+    </script>
+    """
+  "polymer element external script":
+    "prefix": "pes"
+    "body": """
+    <link rel="import" href="${1:../bower_components}/polymer/polymer.html">
+
+    <dom-module id="$2">
+      <template>
+        <style>
+          :host {
+            $5
+          }
+        </style>
+        $4
+      </template>
+      <script src="$3"></script>
+    </dom-module>
+    """
+  "polymer element template only":
+    "prefix": "pet"
+    "body": """
+    <link rel="import" href="${1:../bower_components}/polymer/polymer.html">
+
+    <dom-module id="$2">
+      <template>
+        <style>
+          :host {
+            $4
+          }
+          .content-wrapper > ::content {
+            $5
+          }
+        </style>
+        $3
+        <div class="content-wrapper">
+          <content></content>
+        </div>
+      </template>
+    </dom-module>
+    """
