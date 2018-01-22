@@ -55,13 +55,21 @@ plugins=(git virtualenv virtualenvwrapper brew osx meteor node npm python docker
 
 export PATH="/usr/local/bin:$PATH"
 
+export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 export NVM_DIR="/Users/mienna/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+export NODE_PATH="/usr/local/lib/node_modules"
+
+#export PATH="$HOME/.npm-packages/bin:$PATH"
 # export NPM_PACKAGES=~/.npm-packages
 # export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-export NODE_PATH=$NODE_PATH:/usr/local/Cellar/node/0.12.2_1/lib/node_modules
-export PATH=$PATH:$NPM_PACKAGES/bin
-export DOCKER_MAC_NATIVE=0
+# export NODE_PATH=$NODE_PATH:/usr/local/Cellar/node/0.12.2_1/lib/node_modules
+# export PATH=$PATH:$NPM_PACKAGES/bin
+# export DOCKER_MAC_NATIVE=0
 # export PATH=$PATH:/usr/local/share/npm/bin/
 # export PATH=$PATH:/usr/local/opt/mysql/bin/
 # export PATH=$PATH:/usr/local/var/postgres/bin/
@@ -112,6 +120,5 @@ alias ll='ls -hl'
 alias la='ls -a'
 alias lla='ls -lah'
 alias gem-install='sudo gem install -n /usr/local/bin'
-export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
 
-export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"

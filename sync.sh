@@ -1,7 +1,7 @@
 #!/bin/bash
 
 files="zshrc vimrc gitconfig theanorc"
-folders="atom"
+folders="atom iterm"
 
 # Sync all files
 if [ -n "$files" ]; then
